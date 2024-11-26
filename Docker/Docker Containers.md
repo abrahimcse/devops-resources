@@ -11,6 +11,10 @@ Before running a container, you need an image:
 docker pull nginx
 ```
 This command pulls the official `nginx` image from Docker Hub.
+- View NGINX Configuration File
+    ```
+    cat /etc/nginx/conf.d/default.conf
+    ```
 
 ### 2. Running a Container
 - Basic run:
@@ -89,6 +93,11 @@ docker exec -it <container-name or container-id> bash
     ```
     docker cp /host/path <container-name>:/path/to/destination
     ```
+- Copy the Edited HTML File to the NGINX Container:
+    ```
+    docker cp ym.html mynginx:/usr/share/nginx/html
+    ```
+**Access the HTML File:** Open a browser and go to `http://localhost:8090/ym.html` (or your configured port) to verify the HTML page is being served correctly.
 ### 7. Committing Changes to a New Image
 - Create a new image from a modified container :
     `docker commit <container-name> <new-image-name>`
