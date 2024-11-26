@@ -14,31 +14,31 @@ This command pulls the official `nginx` image from Docker Hub.
 
 ### 2. Running a Container
 - Basic run:
-```
-docker run nginx
-```
+    ```
+    docker run nginx
+    ```
 This runs the container interactively using the nginx image.
 
 - Run in detached mode:
-```
-docker run -d nginx
-```
+    ```
+    docker run -d nginx
+    ```
 Runs the container in the background.
 
 - Run with port mapping:
-```
-docker run -d -p 8080:80 nginx
-```
+    ```
+    docker run -d -p 8080:80 nginx
+    ```
 Maps port `8080` on the host to port `80` in the container.
 
 - Run with a custom name:
-```
-docker run -d --name mynginx -p 8080:80 nginx
-```
+    ```
+    docker run -d --name mynginx -p 8080:80 nginx
+    ```
 - The Container to restart automatically
-```
-docker run -d --name mynginx --restart=always -p 8090:80 nginx
-```
+    ```
+    docker run -d --name mynginx --restart=always -p 8090:80 nginx
+    ```
 ### Explanation of the Command
 1. `docker run`:
     This command is used to create and start a new container from a specified image.
@@ -80,9 +80,11 @@ docker exec -it <container-name or container-id> bash
     ```
 ### 6. Copying Files
 - Copy a file from the container to the host (`CONTAINER -> HOST`) :
+`docker cp <container-name>:/path/to/file /host/path`
     ```
-    docker cp <container-name>:/path/to/file /host/path
+    docker cp mynginx:/ym.txt . 
     ```
+    - `.` present directory
 - Copy a file from the host to the container(`HOST -> CONTAINER`):
     ```
     docker cp /host/path <container-name>:/path/to/destination
@@ -155,3 +157,4 @@ docker exec -it <container-name or container-id> bash
     ```
     docker system prune
     ```
+These steps cover the entire lifecycle of Docker container management, from basic usage to advanced workflows.
