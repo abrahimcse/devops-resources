@@ -102,31 +102,32 @@ docker-compose build
 ## 4. Example: Multi-Service Application
 `docker-compose.yml`
 ```yaml
-version: "3.9"
+version: "3.9"  # Specify the Docker Compose version
 
 services:
-  web:
-    image: nginx
+  web:  # Define the web service
+    image: nginx  # Use the official NGINX image
     ports:
-      - "8080:80"
+      - "8080:80"  # Map host port 8080 to container port 80
     volumes:
-      - ./html:/usr/share/nginx/html
+      - ./html:/usr/share/nginx/html  # Bind volume for serving custom content
     networks:
-      - app-network
+      - app-network  # Connect to the custom bridge network
 
-  db:
-    image: mysql:5.7
-    environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: app_db
-      MYSQL_USER: user
-      MYSQL_PASSWORD: password
+  db:  # Define the database service
+    image: mysql:5.7  # Use the MySQL 5.7 image
+    environment:  # Set MySQL environment variables
+      MYSQL_ROOT_PASSWORD: root  # Root password for MySQL
+      MYSQL_DATABASE: app_db  # Create a database named app_db
+      MYSQL_USER: user  # Create a MySQL user named user
+      MYSQL_PASSWORD: password  # Set the password for the user
     networks:
-      - app-network
+      - app-network  # Connect to the custom bridge network
 
 networks:
   app-network:
-    driver: bridge
+    driver: bridge  # Use the bridge driver for networking
+
 ```
 - **Command**
 ```bash
