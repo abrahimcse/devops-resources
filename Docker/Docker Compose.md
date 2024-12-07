@@ -134,3 +134,4 @@ docker-compose up -d        # Start the application:
 docker-compose ps           # Verify running containers:
 docker-compose down         # Stop the application:
 ```
+Docker Compose is an essential tool for deploying multi-container applications, enabling developers to manage services and resources effectively with minimal configuration.
