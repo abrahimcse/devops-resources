@@ -58,3 +58,5 @@ docker run -d --name web-app -v /home/user/data:/usr/share/nginx/html nginx
 ```
 - `/home/user/data`: Host directory to be mounted.
 - `/usr/share/nginx/html`: Directory inside the container.
+
+By understanding and using Docker Volumes and Bind Mounts effectively, you can manage persistent data and develop more flexible containerized applications.
