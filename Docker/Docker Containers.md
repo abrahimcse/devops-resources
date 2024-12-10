@@ -74,6 +74,21 @@ docker rm -f <container-id or name>
 ```
 - `rm` removing `-f` forcefully 
 
+**To stop all running Docker containers in one command**
+
+```bash
+docker stop $(docker ps -q)
+```
+**To restart all stopped Docker containers in one command,**
+```bash
+docker start $(docker ps -aq)
+```
+
+**To remove all stopped Docker containers in one command, use:**
+```bash
+docker rm $(docker ps -aq)
+```
+
 ### 5. Accessing a Container
 ```
 docker exec -it <container-name or container-id> bash
