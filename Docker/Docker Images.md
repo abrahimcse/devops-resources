@@ -52,6 +52,11 @@ Builds a new image from a `Dockerfile` in the current directory.
     ```
     docker rmi nginx
     ```
+**To remove all Docker images in a single command**
+```bash
+docker rmi -f $(docker images -aq)
+```
+
 ### 5. Tag an Image:
 - `docker tag <existing-image> <new-repo-name>:<tag>`
 
