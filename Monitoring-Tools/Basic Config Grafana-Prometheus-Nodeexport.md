@@ -192,3 +192,4 @@ When you are given a Grafana dashboard link (e.g., https://grafana.com/grafana/d
 3. Adjust the Prometheus scrape interval and targets as needed for your environment.
 
 --- 
+![](https://github.com/abrahimcse/devops-resources/blob/main/Monitoring-Tools/Images/Grafana.png)
