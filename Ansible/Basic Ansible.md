@@ -21,6 +21,10 @@
 ---
 
 ## **Ansible Architecture**
+![Ansible Architecture](https://github.com/abrahimcse/devops-resources/blob/main/Ansible/Images/Ansible-Architecture.png)
+
+
+---
 
 ### **Key Components**:
 1. **Control Node**: The machine where Ansible is installed and commands are run.  
