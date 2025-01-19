@@ -1,6 +1,6 @@
 # **Terraform: Infrastructure as Code (IaC)**  
 
-Terraform is an open-source Infrastructure as Code (IaC) tool developed by [Mitchell Hashimoto](https://mitchellhashimoto.com/) in July 2014. It enables efficient management of infrastructure across multiple cloud providers and hybrid cloud environments.  
+Terraform is an open-source Infrastructure as Code (IaC) tool developed by **Mitchell Hashimoto** in July 2014. It enables efficient management of infrastructure across multiple cloud providers and hybrid cloud environments.  
 
 ---
 
