@@ -55,6 +55,11 @@ Terraform is an open-source Infrastructure as Code (IaC) tool developed by **Mit
 
 ---
 
+## **Terraform Architecture**
+![Terraform Architecture](https://github.com/abrahimcse/devops-resources/blob/main/Terraform/Images/terraform-architecture-diagram.png)
+
+---
+
 ## **Terraform Syntax**  
 Terraform configurations are written in **HCL (HashiCorp Configuration Language)**.  
 
