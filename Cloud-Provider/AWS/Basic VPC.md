@@ -41,6 +41,7 @@ AWS **VPC (Virtual Private Cloud)** is a logically isolated network within AWS w
 **Step 6:** Delete Internet Gateway
 
 **Step 7:** Delete VPC
+
 ---
 
 ## 🚀 Order of VPC Creation  
@@ -211,5 +212,6 @@ For the **Private Route Table**, you typically **do not** add an internet route 
 [LinkedIn](https://www.linkedin.com/in/abrahimcse/) | [GitHub](https://github.com/your-github-profile)  
 
 ---
-
+VPC Architecture
+![](https://github.com/abrahimcse/devops-resources/blob/main/Cloud-Provider/AWS/Images/vpc-architecture.png)
 
