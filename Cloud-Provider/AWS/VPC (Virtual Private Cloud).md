@@ -107,7 +107,7 @@ Repeat the above process but name it **PrivateRouteTable**.
 
 ---
 
-### **5️⃣ Associate Subnets with Route Tables**  
+### **5️⃣ Associate Subnets with Route Tables(Route tables)**  
 **Steps to associate Public Subnet with Public Route Table:**  
 1. Select the **Public Route Table**.  
 2. Go to the **Subnet Associations** tab.  
@@ -119,7 +119,7 @@ Repeat the above steps using the **Private Route Table and Private Subnet**.
 
 ---
 
-### **6️⃣ Add Routes to the Route Table**  
+### **6️⃣ Add Routes to the Route Table (Route table)**  
 **Steps to add an Internet Route for Public Route Table:**  
 1. Select the **Public Route Table**.  
 2. Go to the **Routes** tab.  
