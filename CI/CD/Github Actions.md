@@ -1,4 +1,4 @@
-# Automate our workflow from idea to production (Github Action)
+# Automate our workflow from idea to production (Github Actions)
 
 **GitHub Actions** allows us to `automate our software workflows` seamlessly, now with powerful CI/CD capabilities. `Easily build, test, and deploy` our code directly from GitHub.
 It simplifies code reviews, branch management, and issue triaging, helping teams work more efficiently.
@@ -112,4 +112,4 @@ jobs:
 
 ### Github Actions - Triggers
 
-![Github Actions - Triggers](https://github.com/abrahimcse/devops-resources/blob/main/CICD/Images/githubaction.png)
+![Github Actions - Triggers](https://github.com/abrahimcse/devops-resources/blob/main/CI/CD/Images/githubaction.png)
