@@ -109,3 +109,7 @@ jobs:
 🔹 **Environment Variable :** Set `API_URL` inside `env:` to make it available in the job.
 
 --- 
+
+### Github Actions - Triggers
+
+![Github Actions - Triggers]()
