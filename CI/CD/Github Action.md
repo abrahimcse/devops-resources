@@ -112,4 +112,4 @@ jobs:
 
 ### Github Actions - Triggers
 
-![Github Actions - Triggers]()
+![Github Actions - Triggers](https://github.com/abrahimcse/devops-resources/blob/main/CICD/Images/githubaction.png)
