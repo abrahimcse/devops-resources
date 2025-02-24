@@ -42,7 +42,7 @@ on: push  # Runs the workflow on every push event
 
 jobs:  
   build:  
-    runs-on: ubuntu-latest  
+    runs-on: ubuntu-latest  # OS
     steps:  
       - name: Checkout Code  
         uses: actions/checkout@v3  # Pulls the latest code
@@ -65,7 +65,7 @@ jobs:
       - name: Deploy to Server  
         run: echo "Deploying..."  # Placeholder for deployment script
 ```
-### 3️⃣ Self-hosted Runner Example
+### 3️⃣ Self-hosted Runner Example (Only for Private repository)
 
 ```yml
 name: Deploy to Local VM  
@@ -111,5 +111,7 @@ jobs:
 --- 
 
 ### Github Actions - Triggers
+
+[More Details](https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows)
 
 ![Github Actions - Triggers](https://github.com/abrahimcse/devops-resources/blob/main/CI/CD/Images/githubaction.png)
