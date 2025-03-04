@@ -124,7 +124,7 @@
 2. Navigate to **Home -> Connections -> Data sources**.
 3. Add a new data source:
    - Select **Prometheus**.
-   - Set the URL to `http://<server-ip>:9090/`.
+   - Set the URL to `http://<server-ip>:9090/` (Where Prometheuse is Installed).
    - Click **Save & Test**.
 
 ---
