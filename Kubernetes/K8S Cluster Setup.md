@@ -46,7 +46,7 @@ network:
 ### Disable cloud-init network override:
 
 ```bash
-sudo nano /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg
+sudo vim /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg
 ```
 
 Add:
