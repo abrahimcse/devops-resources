@@ -6,7 +6,7 @@ This document outlines the steps to safely remove a node from a Kubernetes clust
 
 ## 📍 Step 1: Delete Node from Master (Control Plane)
 
-### Run on Master Node:
+### Run on **Master Node**:
 
 ```bash
 kubectl get nodes          # Get current node list
@@ -23,7 +23,7 @@ kubectl delete node devops
 
 ## 🖥️ Step 2: Modify the Worker Node
 
-### On the Worker Node:
+### On the **Worker Node**:
 
 1. **Change the hostname (if needed):**
 
@@ -39,7 +39,7 @@ sudo reboot
 
 ---
 
-## 🧹 Step 3: Reset Kubernetes on Worker Node
+## 🧹 Step 3: Reset Kubernetes on **Worker Node**
 
 Before rejoining, ensure all previous Kubernetes configurations are removed.
 
@@ -55,7 +55,7 @@ sudo systemctl restart kubelet
 
 ## 🔗 Step 4: Rejoin the Cluster
 
-### From the Master Node, generate a new join command:
+### From the **Master Node**, generate a new join command:
 
 ```bash
 kubeadm token create --print-join-command
@@ -69,7 +69,7 @@ kubeadm join 192.168.1.72:6443 --token abcdef.0123456789abcdef \
     --cri-socket /run/containerd/containerd.sock
 ```
 
-### Run this command on Worker Node:
+### Run this command on **Worker Node**:
 
 ```bash
 sudo kubeadm join 192.168.1.72:6443 --token abcdef.0123456789abcdef \
