@@ -1,11 +1,8 @@
-# Elastic Load Balancer (ELB) in AWS – Simple Interview Guide
-
----
+# Elastic Load Balancer (ELB) in AWS
 
 ## 1. What is a Load Balancer?
 
-A Load Balancer is a service that **distributes incoming traffic** across multiple servers.  
-This helps to avoid overload on any single server and keeps your application available.
+A Load Balancer is a service that **distributes incoming traffic** across multiple servers.This helps to avoid overload on any single server and keeps your application available.
 
 ---
 
@@ -21,6 +18,9 @@ This helps to avoid overload on any single server and keeps your application ava
 ---
 
 ## 3. Types of ELB
+- A. Application Load Balancer (ALB)
+- B. Network Load Balancer (NLB)
+- C. Classic Load Balancer (CLB)
 
 ### A. Application Load Balancer (ALB)
 - Works at **Layer 7** (Application Layer)
