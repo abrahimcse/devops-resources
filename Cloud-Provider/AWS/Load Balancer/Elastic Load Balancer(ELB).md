@@ -44,7 +44,129 @@ A Load Balancer is a service that **distributes incoming traffic** across multip
 
 ---
 
-## 4. How does ALB work?
+## 4.🧠 AWS Elastic Load Balancer (ELB) Key Concepts
+
+### 🌐 4.1. Resolve DNS Name
+
+* Every AWS Load Balancer has a **DNS name** like:
+  `myapp-1234567890.elb.amazonaws.com`
+* When a client requests this name, **DNS resolves** it to an **IP address** of the Load Balancer.
+* The client connects to that IP and sends traffic.
+
+---
+
+### 🗱 4.2. Load Balancer
+
+* A service that **distributes incoming traffic** to multiple targets (EC2, IPs, etc.).
+* Increases **scalability**, **availability**, and **fault tolerance**.
+* Types:
+
+  * **ALB (Application Load Balancer)** – HTTP/HTTPS (Layer 7)
+  * **NLB (Network Load Balancer)** – TCP/UDP (Layer 4)
+  * **CLB (Classic Load Balancer)** – Legacy
+
+---
+
+### ⚓ 4.3. Listener
+
+* A **listener checks for incoming connections** on a specific protocol and port.
+* Example:
+
+  * HTTP on port 80
+  * HTTPS on port 443
+* Listener has **rules** to forward traffic to different **target groups**.
+
+---
+
+### 🎯 4.4. Target Group
+
+* A logical group that contains **targets** like EC2, IPs, or Lambda functions.
+* Each group has:
+
+  * Protocol and port (e.g., HTTP:80)
+  * Health check settings
+* Listener forwards requests to **one or more target groups**.
+
+---
+
+### 👨‍💻 4.5. Target
+
+* The **actual resource** (like an EC2 instance) that handles traffic.
+* Must be **registered** in a target group.
+* Targets are monitored using **health checks**.
+
+---
+
+### 🌐 4.6. Subnet
+
+* A **range of IPs inside a VPC**.
+* Load Balancer must be created in **at least two subnets in different Availability Zones** to ensure high availability.
+* Example:
+
+  * Subnet-A: us-east-1a
+  * Subnet-B: us-east-1b
+
+---
+
+### ❤️ 4.7. Health
+
+* The **status** of a target:
+
+  * ✅ Healthy: Receiving traffic
+  * ❌ Unhealthy: Failing health checks
+  * 🔄 Initial: Just added, under checking
+  * 🚩 Draining: Removing from service
+
+---
+
+### 🦥 4.8. Health Check
+
+* ELB sends periodic requests to targets to **test if they are working**.
+* Based on:
+
+  * Protocol: HTTP, HTTPS, TCP
+  * Path: e.g., `/health`
+  * Port: e.g., 80
+  * Interval: Time between checks (default 30s)
+  * Timeout: Max wait for response (default 5s)
+  * Thresholds: # of successes/failures to be marked healthy/unhealthy
+
+---
+
+### ❌ 4.9. Unhealthy Check
+
+* If a target fails multiple checks in a row (e.g., 3 times), it's marked **Unhealthy** and **removed** from traffic rotation.
+
+---
+
+### 🕒 4.10. Period Time / Interval
+
+* Time **between two health check requests**.
+* Example:
+
+  * Interval = 30s
+  * Unhealthy threshold = 3
+    → After 90 seconds of failure → marked unhealthy
+
+---
+
+### ⏱️ 4.11. Response Time
+
+* How long it takes the target to **respond to the health check**.
+* If it responds after the timeout (e.g., 5s), it's considered a **failure**.
+
+---
+
+### 🔀 4.12. Cross-Zone Load Balancing
+
+* When **cross-zone is enabled**, the Load Balancer **can send traffic to any healthy target in any AZ**, **regardless of the source AZ**.
+* ✅ Ensures even distribution
+* ❌ Without it, traffic from one zone goes only to targets in the same zone
+
+**Best Practice: Always enable it for balanced load.**
+
+
+## 5. How does ALB work?
 
 > Client → ALB (checks routing rules) → Target Group → EC2 Instances
 
@@ -54,7 +176,7 @@ A Load Balancer is a service that **distributes incoming traffic** across multip
 
 ---
 
-## 5. When to use which Load Balancer?
+## 6. When to use which Load Balancer?
 
 | Use Case                   | Load Balancer           |
 |----------------------------|------------------------|
@@ -66,7 +188,7 @@ A Load Balancer is a service that **distributes incoming traffic** across multip
 
 ---
 
-## 6. Step-by-step to create an Application Load Balancer
+## 7. Step-by-step to create an Application Load Balancer
 
 1. **Create Load Balancer**  
    - Go to EC2 Console → Load Balancers → Create Load Balancer  
@@ -93,7 +215,7 @@ A Load Balancer is a service that **distributes incoming traffic** across multip
 
 ---
 
-## 7. Monitoring ELB
+## 8. Monitoring ELB
 
 Use **CloudWatch Metrics** like:  
 - HealthyHostCount  
@@ -103,7 +225,7 @@ Use **CloudWatch Metrics** like:
 
 ---
 
-## 8. Common Interview Questions
+## 9. Common Interview Questions
 
 - What types of ELB are there?  
 - Difference between ALB and NLB?  
@@ -113,7 +235,7 @@ Use **CloudWatch Metrics** like:
 
 ---
 
-## 9. Quick Summary
+## 10. Quick Summary
 
 | Load Balancer | Layer | Traffic Type   | Best Use Case               |
 |---------------|-------|----------------|----------------------------|
