@@ -66,6 +66,69 @@ pie
     "Condition": {"IpAddress": {"aws:SourceIp": "192.0.2.0/24"}}
   }
 }
+
+## Policy Types Overview
+
+### 1. Managed Policies (45%)
+**Characteristics**:
+- Reusable policies that can be attached to multiple IAM identities
+- Can be AWS-managed or customer-managed
+- Centrally managed for easy updates
+
+**When to Use**:
+✅ Standard permission sets (e.g., ReadOnlyAccess)  
+✅ Common access patterns across multiple users/roles  
+✅ Environments requiring consistent permissions
+
+**Example AWS-Managed Policies**:
+- `AmazonS3ReadOnlyAccess`
+- `AdministratorAccess`
+- `AWSLambdaBasicExecutionRole`
+
+### 2. Inline Policies (30%)
+**Characteristics**:
+- Embedded directly into a single IAM identity
+- Deleted when the identity is deleted
+- Useful for unique permission requirements
+
+**When to Use**:
+✅ One-off permission requirements  
+✅ Temporary access needs  
+✅ Highly specific resource access
+
+**Example Use Case**:
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [{
+    "Effect": "Allow",
+    "Action": "dynamodb:PutItem",
+    "Resource": "arn:aws:dynamodb:us-east-1:123456789012:table/SpecificTable"
+  }]
+}
+```
+### 3. Service Control Policies - SCPs (25%)
+**Characteristics:**
+- Applied at AWS Organizations level
+- Act as permission guardrails
+- Affect all identities in member accounts
+
+**When to Use:**
+✅ Organization-wide security boundaries
+✅ Preventing prohibited actions across accounts
+✅ Implementing compliance requirements
+
+**Example Restriction:**
+
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [{
+    "Effect": "Deny",
+    "Action": "s3:DeleteBucket",
+    "Resource": "*"
+  }]
+}
 ```
 *[Policy Syntax Guide](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements.html)*
 
