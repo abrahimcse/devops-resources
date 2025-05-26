@@ -4,7 +4,7 @@ This document contains step-by-step instructions for AWS IAM labs, including cre
 
 ---
 
-## 🧪 Lab 1: Create IAM User
+## Lab 1: Create IAM User
 
 **Objective:** Create an IAM user with programmatic and console access.
 
@@ -21,7 +21,7 @@ This document contains step-by-step instructions for AWS IAM labs, including cre
 
 ---
 
-## 🧪 Lab 2: Create Group and Assign to User
+## Lab 2: Create Group and Assign to User
 
 **Objective:** Create a group with predefined permissions and assign the user to this group.
 
@@ -37,7 +37,7 @@ This document contains step-by-step instructions for AWS IAM labs, including cre
 
 ---
 
-## 🧪 Lab 3: Create Custom IAM Policy
+## Lab 3: Create Custom IAM Policy
 
 **Objective:** Create a policy that allows only listing all S3 buckets.
 
@@ -62,7 +62,7 @@ This document contains step-by-step instructions for AWS IAM labs, including cre
 
 ---
 
-## 🧪 Lab 4: Attach Custom Policy to Group
+## Lab 4: Attach Custom Policy to Group
 
 1. Go to **Groups** → click on `Developers`
 2. Go to **Permissions** tab → Click **Add permissions**
@@ -72,7 +72,7 @@ This document contains step-by-step instructions for AWS IAM labs, including cre
 
 ---
 
-## 🧪 Lab 5: Create IAM Role for EC2
+## Lab 5: Create IAM Role for EC2
 
 **Objective:** Create a role to allow EC2 to access S3.
 
@@ -86,7 +86,7 @@ This document contains step-by-step instructions for AWS IAM labs, including cre
 
 ---
 
-## 🧪 Lab 6: Launch EC2 Instance with Role
+## Lab 6: Launch EC2 Instance with Role
 
 1. Go to **EC2** → **Launch instance**
 2. Choose Amazon Linux or Ubuntu
@@ -95,7 +95,7 @@ This document contains step-by-step instructions for AWS IAM labs, including cre
 
 ---
 
-## 🧪 Lab 7: Test IAM Role from EC2
+## Lab 7: Test IAM Role from EC2
 
 1. SSH into the EC2 instance
 2. Run:
@@ -108,7 +108,7 @@ aws s3 ls
 
 ---
 
-## 🧪 Lab 8: Create Inline Policy
+## Lab 8: Create Inline Policy
 
 **Objective:** Add a specific policy directly inside a user or group.
 
@@ -122,7 +122,7 @@ aws s3 ls
 
 ---
 
-## 🧪 Lab 9: Enable MFA for IAM User
+## Lab 9: Enable MFA for IAM User
 
 1. Login with `dev-user` credentials
 2. Go to **IAM** → **Users**
@@ -132,7 +132,7 @@ aws s3 ls
 
 ---
 
-## 📦 Summary Table
+## Summary Table
 
 | Task                          | Tool       | Name/Value              |
 |-------------------------------|------------|--------------------------|
@@ -148,6 +148,6 @@ aws s3 ls
 
 ---
 
-## 🛠️ Optional: AWS CLI Instructions
+## Optional: AWS CLI Instructions
 
 If you want the same steps using AWS CLI, let me know!
