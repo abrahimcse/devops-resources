@@ -66,6 +66,7 @@ pie
     "Condition": {"IpAddress": {"aws:SourceIp": "192.0.2.0/24"}}
   }
 }
+```
 
 ## Policy Types Overview
 
@@ -75,7 +76,8 @@ pie
 - Can be AWS-managed or customer-managed
 - Centrally managed for easy updates
 
-**When to Use**:
+**When to Use**
+
 ✅ Standard permission sets (e.g., ReadOnlyAccess)  
 ✅ Common access patterns across multiple users/roles  
 ✅ Environments requiring consistent permissions
@@ -92,6 +94,7 @@ pie
 - Useful for unique permission requirements
 
 **When to Use**:
+
 ✅ One-off permission requirements  
 ✅ Temporary access needs  
 ✅ Highly specific resource access
@@ -114,6 +117,7 @@ pie
 - Affect all identities in member accounts
 
 **When to Use:**
+
 ✅ Organization-wide security boundaries
 ✅ Preventing prohibited actions across accounts
 ✅ Implementing compliance requirements
