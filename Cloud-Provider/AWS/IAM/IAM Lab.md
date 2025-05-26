@@ -44,7 +44,7 @@ This document contains step-by-step instructions for AWS IAM labs, including cre
 1. Go to **Policies** → Click **Create policy**
 2. Choose **JSON** tab, paste:
 
-\`\`\`json
+```json
 {
   "Version": "2012-10-17",
   "Statement": [
@@ -55,7 +55,7 @@ This document contains step-by-step instructions for AWS IAM labs, including cre
     }
   ]
 }
-\`\`\`
+```
 
 3. Click **Next** → Name it `S3ListBucketsOnly`
 4. Click **Create policy**
@@ -100,9 +100,9 @@ This document contains step-by-step instructions for AWS IAM labs, including cre
 1. SSH into the EC2 instance
 2. Run:
 
-\`\`\`bash
+```bash
 aws s3 ls
-\`\`\`
+```
 
 > If AWS CLI is not installed, install and configure it first.
 
