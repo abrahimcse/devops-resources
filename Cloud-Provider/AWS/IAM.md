@@ -11,6 +11,37 @@
 
 *Source: [IAM Quotas](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-quotas.html)*
 
+
+> 1. 👤 IAM Users
+
+- Represents human users or applications.
+- Can have:
+    - Console access (via username/password)
+    - Programmatic access (via access keys)
+- Best Practices:
+    - Do not use root account for daily operations.
+    - Use least privilege principle.
+    - Enforce password policies and MFA.
+
+> 2. 👥 IAM Groups
+- Collection of IAM users.
+- Permissions applied to the group are inherited by its members.
+- Makes managing users easier (e.g., give all developers S3 access).
+- Example groups:
+    - `Admins` – Full access
+    - `Developers` – EC2, S3 read/write
+    - `Viewers` – Read-only permissions
+
+> 3. 🎭 IAM Roles
+
+- Used to delegate permissions to:
+    - AWS services (e.g., EC2, Lambda)
+    - IAM users
+    - Cross-account access
+    - Federated users (SSO, Google, Active Directory)
+- **No permanent credentials;** uses temporary tokens.
+- Example: An EC2 instance can assume a role to access S3 securely.
+
 ---
 
 ## 2. Policy Framework
