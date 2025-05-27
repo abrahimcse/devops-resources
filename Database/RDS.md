@@ -8,11 +8,11 @@ AWS Relational Database Service (RDS) is a managed database service that lets yo
 
 ## 2. Types of Databases Supported by RDS
 - **Amazon Aurora** – AWS's own high-performance DB
-- **MySQL**
-- **PostgreSQL**
-- **MariaDB**
-- **Oracle**
-- **Microsoft SQL Server**
+- **MySQL** – Popular open-source
+- **PostgreSQL**  – dvanced open-source
+- **MariaDB**  – MySQL fork, fully open-source
+- **Oracle**  – Enterprise-grade
+- **Microsoft SQL Server**  – For Windows-based apps
 
 ---
 
