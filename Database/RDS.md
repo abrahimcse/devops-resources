@@ -2,7 +2,7 @@
 # AWS RDS (Relational Database Service) – Full Guide
 
 ## 1. What is AWS RDS?
-AWS RDS is a managed database service by Amazon Web Services. It helps you create, run, and manage databases easily without worrying about hardware, software setup, or maintenance.
+AWS Relational Database Service (RDS) is a managed database service that lets you run databases in the cloud without handling servers, backups, or updates. AWS takes care of setup, maintenance, scaling, and security.
 
 ---
 
