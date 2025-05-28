@@ -32,16 +32,33 @@ When a user types a domain in the browser, the DNS resolution process follows th
 8. **Connection:** The browser connects to the IP address to load the site.
 
 
-```mermaid
-flowchart TD
-    A[User enters domain in browser] --> B[Query sent to Recursive Resolver]
-    B --> C[Checks Root Nameserver]
-    C --> D[TLD Nameserver]
-    D --> E[Authoritative Nameserver]
-    E --> F[Authoritative server returns IP address]
-    F --> G[Recursive Resolver returns IP to browser]
-    G --> H[Browser connects to IP and loads website]
-```
+DNS Resolution Process Diagram
+
+[User's Device]                    [ISP Recursive Resolver]
+      |                                      |
+      |-- 1. Query: example.com? ----------->|
+      |                                      |
+      |                                      |-- 2. Check Cache
+      |                                      |     (If found, return IP)
+      |                                      |
+      |                                      |-- 3. Not cached? Query Root Server
+      |                                      |       |
+      |                                      |<------| (Refers to .com TLD)
+      |                                      |
+      |                                      |-- 4. Query .com TLD Server
+      |                                      |       |
+      |                                      |<------| (Refers to example.com NS)
+      |                                      |
+      |                                      |-- 5. Query Authoritative NS
+      |                                      |       |
+      |                                      |<------| (Returns A record: 93.184.216.34)
+      |                                      |
+      |<-- 6. Response: 93.184.216.34 ------|
+      |                                      |
+[Browser connects to IP]                [Resolver caches record]
+
+
+
 This process happens within milliseconds, and caching at various levels accelerates future requests.
 ---
 
