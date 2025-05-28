@@ -57,8 +57,12 @@ DNS Resolution Process Diagram
       |                                      |
 [Browser connects to IP]                [Resolver caches record]
 
+### Visual Flow:
 
-
+User → Recursor → Root → TLD → Authoritative
+       ^                |         |
+       |________________|         |
+       |__________________________|
 This process happens within milliseconds, and caching at various levels accelerates future requests.
 ---
 
