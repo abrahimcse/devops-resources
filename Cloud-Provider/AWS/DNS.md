@@ -31,8 +31,18 @@ When a user types a domain in the browser, the DNS resolution process follows th
 7. **Response:** The recursive resolver returns the IP to the browser.
 8. **Connection:** The browser connects to the IP address to load the site.
 
-This process happens within milliseconds, and caching at various levels accelerates future requests.
 
+```mermaid
+flowchart TD
+    A[User enters domain in browser] --> B[Query sent to Recursive Resolver]
+    B --> C[Checks Root Nameserver]
+    C --> D[TLD Nameserver]
+    D --> E[Authoritative Nameserver]
+    E --> F[Authoritative server returns IP address]
+    F --> G[Recursive Resolver returns IP to browser]
+    G --> H[Browser connects to IP and loads website]
+```
+This process happens within milliseconds, and caching at various levels accelerates future requests.
 ---
 
 ## 3. Types of DNS Servers
@@ -151,3 +161,5 @@ The Domain Name System is a cornerstone of internet infrastructure that translat
 Understanding how DNS works, its record types, caching mechanisms, security features, and tools will help you manage domains efficiently, troubleshoot network issues, and implement robust digital infrastructures.
 
 ---
+
+
