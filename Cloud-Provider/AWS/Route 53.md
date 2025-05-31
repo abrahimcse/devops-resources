@@ -5,7 +5,7 @@ It provides three main functions:
 - DNS routing, and 
 - Health checking of resources. 
 
-The name "Route 53" comes from TCP/UDP port 53 (where DNS requests are handled) and the iconic "Route 66" highway in the USA, symbolizing routing traffic to Amazon DNS 11.
+The name "Route 53" comes from TCP/UDP port 53 (where DNS requests are handled) and the iconic "Route 66" highway in the USA, symbolizing routing traffic to Amazon DNS.
 
 ### Key Characteristics
 - 100% SLA availability
@@ -27,7 +27,7 @@ The name "Route 53" comes from TCP/UDP port 53 (where DNS requests are handled) 
    - ccTLDs: Country-specific (.uk, .jp)
 
 #### Route 53 as Registrar:
-- Reseller for Amazon Registrar and Gandi
+- Reseller for Amazon Registrar
 - Supports 400+ TLDs
 - Automated domain management
 
