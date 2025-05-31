@@ -1,10 +1,10 @@
 # Amazon Route 53 - Complete Documentation
-Amazon Route 53 is a scalable and highly available Domain Name System (DNS) web service that provides:
-- Domain registration
-- DNS routing
-- Health checking of resources
-
-**Name Origin**: Combines "Route" (from Route 66) with "53" (DNS port number)
+Amazon Route 53 is a scalable and highly available Domain Name System (DNS) web service offered by AWS. 
+It provides three main functions: 
+- Domain registration, 
+- DNS routing, and 
+- Health checking of resources. 
+The name "Route 53" comes from TCP/UDP port 53 (where DNS requests are handled) and the iconic "Route 66" highway in the USA, symbolizing routing traffic to Amazon DNS 11.
 
 ### Key Characteristics
 - 100% SLA availability
