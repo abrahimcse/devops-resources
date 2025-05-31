@@ -4,6 +4,7 @@ It provides three main functions:
 - Domain registration, 
 - DNS routing, and 
 - Health checking of resources. 
+
 The name "Route 53" comes from TCP/UDP port 53 (where DNS requests are handled) and the iconic "Route 66" highway in the USA, symbolizing routing traffic to Amazon DNS 11.
 
 ### Key Characteristics
