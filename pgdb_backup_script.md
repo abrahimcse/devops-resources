@@ -7,7 +7,7 @@ This script automates PostgreSQL database backups with compression, retention ma
 - Automated backups of all PostgreSQL databases
 - Backup compression using gzip
 - Configurable retention policy
-- Telegram notifications for success/failure
+- Telegram notifications for failure
 - Detailed logging
 
 ## Requirements
