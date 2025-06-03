@@ -9,7 +9,7 @@ This guide explains how to integrate **Telegram notifications** with your GitHub
 1. Open Telegram and search for `@BotFather`.
 2. Type `/start` and then `/newbot`.
 3. Provide a name and a unique username for your bot.
-4. You’ll receive a **bot token** like: `7275426022:AAEPbI0Zq0QxHRmFg7Dk5yKz5xh5gSpvEb4`
+4. You’ll receive a **bot token** like: `7275426022:AAEPbI0Zq`
 
 ---
 
@@ -18,9 +18,9 @@ This guide explains how to integrate **Telegram notifications** with your GitHub
 1. Open [Web Telegram](https://web.telegram.org).
 2. Go to the group where the bot and DevOps team are added.
 3. In the URL, find the **group ID** at the end of the link. 
-  For example: `https://web.telegram.org/k/#-4674633737`
+  For example: `https://web.telegram.org/k/#-123456789`
 
-4. Use this as the **Chat ID**. Keep the minus `-` sign: Chat ID: `-4674633737`
+4. Use this as the **Chat ID**. Keep the minus `-` sign: Chat ID: `-123456789`
 
 
 > ✅ Make sure your bot is added to the group **and has permission to send messages**.
@@ -31,10 +31,10 @@ This guide explains how to integrate **Telegram notifications** with your GitHub
 
 Go to your GitHub repository → **Settings** → **Secrets and Variables** → **Actions** and add the following:
 
-| Name                  | Value                                                |
-|-----------------------|------------------------------------------------------|
-| `TELEGRAM_BOT_TOKEN`  | `7275426022:AAEPbI0Zq0QxHRmFg7Dk5yKz5xh5gSpvEb4`     |
-| `TELEGRAM_CHAT_ID`    | `-4674633737`                                        |
+| Name                  | Value                       |
+|-----------------------|-----------------------------|
+| `TELEGRAM_BOT_TOKEN`  | `77275426022:AAEPbI0Zq`     |
+| `TELEGRAM_CHAT_ID`    | `-123456789`                |
 
 ---
 
