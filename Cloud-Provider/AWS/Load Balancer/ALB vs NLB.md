@@ -52,7 +52,3 @@
 | VPN / Game Server | NLB |
 | Path-based routing | ALB |
 | High speed TCP traffic | NLB |
-
----
-
-🛠️ Need help with Terraform, Diagram, or Implementation? Just ask!
