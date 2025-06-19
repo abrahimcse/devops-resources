@@ -68,7 +68,7 @@ SNS allows:
 Multiple services consume the same message independently.
 ```text
           +--------+       +------------+
-Publisher |        |  -->  |   SNS      |
+         |Publisher |  -->  |   SNS      |
           +--------+       +-----+------+
                                  |
                +----------------+-----------------+
