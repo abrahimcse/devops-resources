@@ -1,8 +1,8 @@
 # AWS VPC Setup Guide
 
-
-
 AWS **VPC (Virtual Private Cloud)** is a logically isolated network within AWS where you can launch and manage cloud resources securely. It acts like a private data center in the cloud.
+
+![VPC](https://github.com/abrahimcse/devops-resources/blob/main/Cloud-Provider/AWS/Images/vpc-architecture.png)
 
 ###  🔹Key Features  
 - **Custom IP Range**: Define your own CIDR block (e.g., `10.0.0.0/16`).  

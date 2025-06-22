@@ -7,6 +7,8 @@ It provides three main functions:
 
 The name "Route 53" comes from TCP/UDP port 53 (where DNS requests are handled) and the iconic "Route 66" highway in the USA, symbolizing routing traffic to Amazon DNS.
 
+![Amazon Route 53](https://github.com/abrahimcse/devops-resources/blob/main/Cloud-Provider/AWS/Images/route53.png)
+
 ### Key Characteristics
 - 100% SLA availability
 - Low-latency DNS responses

@@ -6,6 +6,8 @@ A Load Balancer is a service that **distributes incoming traffic** across multip
 
 ---
 
+![ELB](https://github.com/abrahimcse/devops-resources/blob/main/Cloud-Provider/AWS/Images/ELB.png)
+
 ## 2. Why use ELB?
 
 | Reason              | Explanation                                               |

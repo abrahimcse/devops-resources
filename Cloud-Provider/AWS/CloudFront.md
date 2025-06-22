@@ -3,6 +3,8 @@
 ## **1. What is Amazon CloudFront?**
 Amazon CloudFront is a **Content Delivery Network (CDN)** that accelerates the delivery of static and dynamic content (e.g., websites, APIs, videos) using AWS's global network of **edge locations**.
 
+![CloudFront](https://github.com/abrahimcse/devops-resources/blob/main/Cloud-Provider/AWS/Images/configure-cf.png)
+
 ### **Key Features**
 - **Low Latency**: 310+ edge locations worldwide.
 - **Integration**: Works with S3, EC2, ALB, and custom origins.
