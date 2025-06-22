@@ -3,6 +3,23 @@
 Terraform is an open-source Infrastructure as Code (IaC) tool developed by **Mitchell Hashimoto** in July 2014. It enables efficient management of infrastructure across multiple cloud providers and hybrid cloud environments.  
 
 ---
+## Project Structure
+
+```
+terraform-project/
+├── modules/               # Reusable Terraform modules
+│   ├── networking/        # VPC, subnets, etc.
+│   ├── compute/           # EC2, VM instances
+│   └── database/          # RDS, Cloud SQL
+├── environments/          # Environment-specific configs
+│   ├── dev/               # Development environment
+│   ├── staging/           # Staging environment
+│   └── prod/              # Production environment
+├── main.tf                # Primary configuration
+├── variables.tf           # Input variables
+├── outputs.tf             # Output variables
+└── README.md              # This file
+```
 
 ## **Key Features**
 - **Multi-cloud and Hybrid Cloud** support.  
