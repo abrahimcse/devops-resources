@@ -111,7 +111,6 @@ vim node_exporter.yml
 
 ```yaml
 ---
----
 - name: Install and configure Node Exporter
   hosts: all
   become: yes
