@@ -87,7 +87,8 @@ prod-kafka ansible_host=example.kafka.ip ansible_user=ubuntu ansible_ssh_private
 prod-keycloak ansible_host=example.keycloak.ip ansible_user=ubuntu ansible_ssh_private_key_file=/path/to/private-key.pem
 ```
 
-> Replace `example.*.ip` with actual server IPs and `/path/to/private-key.pem` with your private key path.
+**Replace `example.*.ip` with actual server IPs and `/path/to/private-key.pem` with your private key path.**
+
 > Example : prod-k8s-master ansible_host=10.11.8.178 ansible_user=ubuntu ansible_ssh_private_key_file=/ctech/aws-key/hsms-prod-common.pem
 ---
 
